@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Botão</title>
+</head>
+<body>
+  <input id="empregador" type="text" placeholder="Nome da empresa">
+  <button id="continuar" type="button">Continuar</button>
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById('continuar').addEventListener('click', function () {
+      const nome = document.getElementById('empregador').value;
+      document.getElementById('resultado').textContent = 'Empresa informada: ' + (nome || '(vazio)');
+    });
+  </script>
+</body>
+</html>
