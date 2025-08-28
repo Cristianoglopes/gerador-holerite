@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"
+  <title>GERADOR DE HOLERITE</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 24px;
+      background: #f7f7f7;
+    }
+
+    .card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: 16 px;
+      border-radius: 8px,
+      box-shadow: 0 2px 10px rgba (0,0,0,.05);
+    }
+
+    label { display: block, margin-top: 10px; }
+    input, button { font-size: 14px; padding: 8px; }
+    input { width: 100%, max-width: 420px; }
+    button { cursor: pointer; }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Gerador de Holerite</h1>
+
+    <form id="form-holerite">
+      <label for="empregador">Empregador</label>
+      <input id="empregador" type="text" placeholder="Nome da empresa">
+      <button id="continuar" type="button">Continuar</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    document.getElementById('continuar').addEventListener('click', function () {
+      const nome = document.getElemenyById('empregador').value;
+      document.getElementById('resultado').textConten =
+        'Empresa informada: ' + (nome || '(vazio)');
+    });
+  </script>
+</body>
+</html>
